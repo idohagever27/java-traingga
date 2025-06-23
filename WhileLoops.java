@@ -106,4 +106,137 @@ public class WhileLoops {
             System.out.println("min = "+ min+" max = "+max);
         }
     }
+    public static void q10() {
+        Scanner scanner = new Scanner(System.in);
+        double max1=0,max2=0,num;
+        System.out.println("grams?");
+        num = scanner.nextDouble();
+        while (num>=0) {
+            System.out.println("grams?");
+            num = scanner.nextDouble();
+            if(num>=max1){
+                max1=max2;
+                num=max1;
+            }
+            else if(num>=max2){
+                max2=num;
+            }
+        }
+        System.out.println(max2);
+        System.out.println(max1);
+    }
+    public static void q11() {
+        Scanner scanner = new Scanner(System.in);
+        int count=0,num1,num2;
+        int diff = Math.abs(num1 - num2);
+        System.out.println("two nums");
+        num1=scanner.nextInt();
+        num2=scanner.nextInt();
+        while((count<=20)&& (num1>=0||num2>=0 )&&(diff!=1)){
+            System.out.println("two nums");
+            num1=scanner.nextInt();
+            num2=scanner.nextInt();
+            count++;
+        }
+        System.out.println(count);
+    }
+    public static void q14() {
+       Scanner scanner = new Scanner(System.in);
+       double nums,bigger=0,sum=0;
+       while(true){
+        System.out.println("num?");
+        nums=scanner.nextDouble();
+        sum++;
+        if(nums>bigger){
+            bigger=nums;
+        }
+        
+        else if(bigger>nums){
+            break;
+        }
+       } 
+    }
+    public static void q15() {
+        Scanner scanner = new Scanner(System.in);
+        int kidNum,sumFirst=0,sumSecond=0;;
+        boolean firstWork;
+        boolean secondWork;
+        while(kidNum!=0){
+            System.out.println("stundent num?");
+            kidNum=scanner.nextInt();
+            System.out.println("first work?");
+            String y = scanner.nextLine();
+            if(y=="true"){
+                firstWork = true;
+                sumFirst++;
+            }
+            else{
+                firstWork=false;
+            }
+            System.out.println("second work?");
+             String x = scanner.nextLine();
+            if(x=="true"){
+                secondWork = true;
+                sumSecond++;
+            }
+            else{
+                secondWork=false;
+            }
+
+        }
+        System.out.println(sumFirst);
+        System.out.println(sumSecond);
+
+    }
+    public static void q16() {
+        Scanner scanner = new Scanner(System.in);
+        int sum=0,num,sumPipol=0;
+        boolean continiu=true;
+        while (continiu==true){
+            System.out.println("enter grade");
+            num = scanner.nextInt();
+            if(num>=50&& num<=90){
+                sum=sum+num;
+                sumPipol++;
+            }
+            System.out.println("continu?");
+            int yn = scanner.nextInt();
+            if(yn==1){
+                continiu=true;
+            }
+            else{
+                continiu=false;
+            }
+        }
+        System.out.println(sum/sumPipol);
+    }
+    public static void q17() {
+         Scanner scanner = new Scanner(System.in);
+         double num;
+         int numnump=0;
+         
+         while (num!=0){
+            System.out.println("eneter num");
+            num = scanner.nextDouble();
+            if (num%1==0){
+                num = numnump;
+                System.out.println(Math.abs(numnump));
+            }
+            else{
+           System.out.println(Math.abs(num)); 
+            }
+         }
+    }
+    public static void q18() {
+         int a=1,b=1,c;
+         System.out.print(a+" ");
+         while( b<1000){
+            System.out.print(b+" ");
+            c=a+b;
+            a=b;
+            b=c;
+         }
+         
+
+    }
 }
